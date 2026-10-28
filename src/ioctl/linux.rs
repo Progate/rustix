@@ -49,6 +49,7 @@ const DIR_MASK: Opcode = (1 << DIR_BITS) - 1;
     target_arch = "x86_64",
     target_arch = "aarch64",
     target_arch = "riscv32",
+    all(target_arch = "wasm32", target_vendor = "browseros"),
     target_arch = "riscv64",
     target_arch = "loongarch64",
     target_arch = "csky"
