@@ -518,7 +518,8 @@ mod statx_flags {
     not(any(
         target_os = "emscripten",
         target_env = "gnu",
-        all(target_arch = "loongarch64", target_env = "musl")
+        all(target_arch = "loongarch64", target_env = "musl"),
+        all(target_arch = "wasm32", target_vendor = "browseros")
     ))
 ))]
 pub(crate) use statx_flags::*;
