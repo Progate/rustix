@@ -76,6 +76,7 @@ pub struct KernelSigaction {
         target_arch = "mips64",
         target_arch = "mips64r6",
         target_arch = "riscv32",
+        all(target_arch = "wasm32", target_vendor = "browseros"),
         target_arch = "riscv64"
     )))]
     pub sa_restorer: KernelSigrestore,
@@ -118,6 +119,7 @@ bitflags::bitflags! {
             target_arch = "mips64",
             target_arch = "mips64r6",
             target_arch = "riscv32",
+            all(target_arch = "wasm32", target_vendor = "browseros"),
             target_arch = "riscv64"
         )))]
         const RESTORER = linux_raw_sys::general::SA_RESTORER as _;
@@ -872,6 +874,7 @@ mod tests {
             target_arch = "mips64",
             target_arch = "mips64r6",
             target_arch = "riscv32",
+            all(target_arch = "wasm32", target_vendor = "browseros"),
             target_arch = "riscv64"
         )))]
         check_renamed_struct!(
@@ -891,6 +894,7 @@ mod tests {
             target_arch = "mips64",
             target_arch = "mips64r6",
             target_arch = "riscv32",
+            all(target_arch = "wasm32", target_vendor = "browseros"),
             target_arch = "riscv64"
         ))]
         check_renamed_struct!(
